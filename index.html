@@ -4,31 +4,30 @@
 <head>
     <title>Bookmark+</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
-   
+
 </head>
 
 <body>
     <div class="container">
-            <div class="error-container"></div>
-        <h1>Bookmark+</h1>
+        <div class="error-container"></div>
+        <img src="main.png">
+        
         <div class="main-div">
-                <button id="showhide" type="submit"></button>
-                <span>Minimum Rating:</span>
-                <input type="radio" name="1" value="1"> 1
-                <input type="radio" name="2" value="2"> 2
-                <input type="radio" name="3" value="3"> 3
-                <input type="radio" name="3" value="3"> 4
-                <input type="radio" name="3" value="3"> 5
-            </div>
+            <button id="showhide" type="submit"></button>
+            <br>
+            <span>Minimum Rating:</span>
+            <input name="min-rating" type="number" placeholder="1-5" min="1" max="5" />
+        </div>
         <form id="bookmark-form">
             <label for="title">Title of your Bookmark:
                 <input name="title" type="text" required />
             </label>
             <br />
             <label for="url">URL:
-                <input name="url" type="text" required />
+                <input name="url" type="text" placeholder="must include http://" required pattern="http://" />
             </label>
             <br />
             <label for="desc">Bookmark Description:
@@ -36,12 +35,13 @@
             </label>
             <br />
             <label for="rating">Rating:</label>
-            <input name="rating" type="number" placeholder="1-5" min="1" max="5"  required/>
+            <input name="rating" type="number" placeholder="1-5" min="1" max="5" required />
             <br>
             <input type="submit">
         </form>
 
         <ul class="bookmark-list">
+
         </ul>
     </div>
 

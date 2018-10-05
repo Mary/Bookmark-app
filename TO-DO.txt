@@ -1,0 +1,5 @@
+NEED TO DO:
+Toggle Add Bookmark Clicked
+Expand the Bookmark(store.toggleExpandedKey)
+Handle New Item Submit
+Handle Rating Filter

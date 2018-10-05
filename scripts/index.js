@@ -3,11 +3,13 @@
 $(document).ready(function() {
     bookmarklist.bindEventListeners();
     bookmarklist.render();
-  
-    api.getItems((items) => {
+
+      api.getItems((items) => {
       items.forEach((item) => store.addItem(item));
       store.addExpandedKey();
-      bookmarkList.render();
+      bookmarklist.render();
       console.log(store.items);
     });
+  
+    
   });
